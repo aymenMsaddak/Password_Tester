@@ -1,0 +1,19 @@
+/* Custom progress bar colors */
+.bg-red { background-color: #dc3545; }
+.bg-orange { background-color: #fd7e14; }
+.bg-yellow { background-color: #ffc107; }
+.bg-lightgreen { background-color: #28a745; }
+.bg-green { background-color: #20c997; }
+
+/* Card styling */
+.card {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Responsive design */
+@media (max-width: 576px) {
+    .card {
+        margin: 0 10px;
+    }
+}

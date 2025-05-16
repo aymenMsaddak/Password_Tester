@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Tester</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="{{ url_for('static', filename='script.js') }}" defer></script>
+
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Password Strength Tester</h1>
+        <div class="card shadow">
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="password" class="form-label">Enter Password:</label>
+                    <input type="password" class="form-control" id="password" placeholder="Test your password...">
+                </div>
+                <button id="evaluate-btn" class="btn btn-primary">Evaluate</button>
+                
+                <!-- Strength Meter -->
+                <div class="mt-4">
+                    <h5>Strength: <span id="strength-label">None</span></h5>
+                    <div class="progress mt-2">
+                        <div id="strength-bar" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                    </div>
+                </div>
+                
+                <!-- Feedback -->
+                <div id="feedback" class="mt-4">
+                    <h5>Feedback:</h5>
+                    <ul id="tips-list" class="list-group"></ul>
+                    <div id="suggestion" class="mt-3 alert alert-info" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
