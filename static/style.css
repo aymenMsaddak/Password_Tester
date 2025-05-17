@@ -1,19 +1,32 @@
-/* Custom progress bar colors */
-.bg-red { background-color: #dc3545; }
-.bg-orange { background-color: #fd7e14; }
-.bg-yellow { background-color: #ffc107; }
-.bg-lightgreen { background-color: #28a745; }
-.bg-green { background-color: #20c997; }
-
-/* Card styling */
-.card {
-    max-width: 600px;
-    margin: 0 auto;
+.password-container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-/* Responsive design */
-@media (max-width: 576px) {
-    .card {
-        margin: 0 10px;
-    }
+#password-strength {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+#suggestion-prompt, #suggestion-feedback {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+button {
+  margin: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#suggested-password {
+  font-family: monospace;
+  background-color: #eee;
+  padding: 5px;
+  margin: 10px 0;
 }
