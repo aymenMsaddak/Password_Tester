@@ -1,4 +1,4 @@
-/* Reset some basic elements */
+/* Reset and Base Styles */
 body, html {
     margin: 0;
     padding: 0;
@@ -44,7 +44,7 @@ h5 {
     padding: 20px;
 }
 
-/* Input field */
+/* Input */
 input[type="password"] {
     background-color: #1e1e2f;
     color: #fff;
@@ -60,7 +60,7 @@ input[type="password"]:focus {
     box-shadow: 0 0 10px #00fff0;
 }
 
-/* Button */
+/* Evaluate Button */
 #evaluate-btn {
     background: linear-gradient(135deg, #00fff0, #ff00e0);
     border: none;
@@ -79,7 +79,7 @@ input[type="password"]:focus {
     box-shadow: 0 0 25px #ff00e0;
 }
 
-/* Progress Bar */
+/* Progress Bar Container */
 .progress {
     height: 20px;
     border-radius: 10px;
@@ -90,8 +90,33 @@ input[type="password"]:focus {
 .progress-bar {
     height: 100%;
     transition: width 0.4s ease;
-    background: linear-gradient(90deg, #00ff87, #60efff);
-    box-shadow: 0 0 10px #00ffdd;
+}
+
+/* Dynamic Strength Colors */
+.progress-bar.bg-red {
+    background: linear-gradient(90deg, #ff4e50, #f00000);
+    box-shadow: 0 0 8px #ff4e50;
+}
+
+.progress-bar.bg-orange {
+    background: linear-gradient(90deg, #f9d423, #ff4e00);
+    box-shadow: 0 0 8px #ff9500;
+}
+
+.progress-bar.bg-yellow {
+    background: linear-gradient(90deg, #fff200, #ffdc00);
+    box-shadow: 0 0 8px #ffea00;
+    color: #000;
+}
+
+.progress-bar.bg-lightgreen {
+    background: linear-gradient(90deg, #a8ff78, #78ffd6);
+    box-shadow: 0 0 8px #78ffd6;
+}
+
+.progress-bar.bg-green {
+    background: linear-gradient(90deg, #00ff87, #1de9b6);
+    box-shadow: 0 0 8px #00ffcc;
 }
 
 /* Tips List */
@@ -110,21 +135,47 @@ input[type="password"]:focus {
     font-size: 0.95rem;
 }
 
-/* Feedback Section */
+/* Feedback Header */
 #feedback h5 {
     margin-top: 20px;
     font-weight: bold;
 }
 
-.alert-info {
-    background-color: rgba(0, 255, 255, 0.1);
-    border: 1px solid #00fff0;
-    color: #00eaff;
+/* Suggestion Box */
+#suggestion {
+    border-left: 4px solid #00fff0;
+    box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.2);
+    background-color: rgba(0, 255, 255, 0.05);
+    padding: 10px 15px;
     border-radius: 10px;
-    font-size: 0.95rem;
+    font-family: monospace;
+    font-size: 1rem;
+    margin-top: 15px;
 }
 
-/* Animation Sparkle */
+/* Copy Button */
+#suggestion button {
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid #00fff0;
+    color: #00fff0;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font-size: 0.9rem;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+#suggestion button:hover {
+    background: rgba(0, 255, 255, 0.3);
+    box-shadow: 0 0 10px #00fff0;
+    transform: scale(1.05);
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Container Hover Animation */
 @keyframes neonGlow {
     0%, 100% {
         box-shadow: 0 0 10px #00fff0, 0 0 20px #00fff0;
@@ -137,4 +188,3 @@ input[type="password"]:focus {
 .container:hover {
     animation: neonGlow 2s infinite;
 }
-
